@@ -34,7 +34,8 @@ body * {
 }
 
 div#profile {
-  width: 360px;
+  width: 100%;
+  max-width: 350px;
   margin: auto;
   text-align: center;
   padding: 24px;
