@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/assets/bg-mobile.jpg);
+  --stroke-color: rgb(255, 255, 255, 0.5);
+  ---surface-color: rgb(255, 255, 255, 0.1);
+  --surface-color-hover: rgb(255, 255, 255, 0.02);
+  --highlight-hover: rgb(255, 255, 255, 0.2);
+  --botao--bg-url: url(./assets/assets/moon-stars.svg);
+}
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/assets/bg-mobile-light.jpg);
+  --stroke-color: rgb(0, 0, 0, 0.5);
+  ---surface-color: rgb(0, 0, 0, 0.05);
+  --surface-color-hover: rgb(255, 255, 255, 0.4);
+  --highlight-hover: rgb(0, 0, 0, 0.2);
+  --botao--bg-url: url(./assets/assets/sun.svg);
+}
+body {
+  background: var(--bg-url);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+body,
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+div#profile {
+  width: 360px;
+  margin: auto;
+  text-align: center;
+  padding: 24px;
+  margin-top: 60px;
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  padding: 12px; /* Adiciona espaço interno (preenchimento) dentro da li */
+  /*animation: borderAnimation 4s infinite linear alternate; /* Aplica a animação à borda */
+  padding: 0 24;
+}
+
+div#profile img {
+  width: 112px;
+  display: block;
+  margin: auto;
+}
+
+div#profile p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 34px;
+  margin-top: 9px;
+}
+
+div#container {
+  margin-top: 50px;
+}
+#botao {
+  position: relative;
+  width: 64px;
+  margin: 24px auto 24px auto;
+}
+
+#botao button {
+  width: 32px;
+  height: 32px;
+  background: white var(--botao--bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+  top: 50%;
+}
+#botao span {
+  display: block;
+  width: 61px;
+  height: 24px;
+  background: var(---surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 9999px;
+}
+
+.light #botao button {
+  right: 0;
+  left: initial;
+}
+
+div#lista {
+  margin-top: 5px;
+}
+
+div#lista ul {
+  list-style-type: none;
+}
+
+div#lista ul li a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+div#lista ul li:hover {
+  border: 1.5px solid var(--text-color);
+  background: var(--surface-color-hover);
+}
+
+div#lista {
+  margin-top: 20px; /* Ajuste o valor conforme necessário */
+}
+div#lista ul li {
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  padding: 8px; /* Adiciona um preenchimento interno para o conteúdo */
+  margin-bottom: 16px; /* Ajuste o espaçamento entre os itens conforme necessário */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  padding: 12px; /* Adiciona espaço interno (preenchimento) dentro da li */
+  border: 1px solid var(--stroke-color);
+  background: var(---surface-color);
+  cursor: pointer;
+  transition: background 0.5s;
+  backdrop-filter: blur(10px);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 24px 0;
+}
+#icones {
+  display: flex;
+  padding: 5px 0;
+  gap: 15px;
+  font-size: 35px;
+  justify-content: center;
+}
+.style-icon:hover {
+  background: var(--highlight-hover);
+  border-radius: 100%;
+  padding: 16px;
+}
+.style-icon {
+  transition: 0.6s;
+  padding: 16px;
+  border-radius: 100%;
+}
+footer {
+  text-align: center;
+  align-items: center;
+  margin-top: 70px;
+  font-size: 14px;
+}
+footer p {
+  color: var(--bg-url);
+}
+.eu-e-mo {
+  border-radius: 30px;
+  max-width: 150px;
+}
