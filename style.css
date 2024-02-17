@@ -79,6 +79,10 @@ div#container {
   z-index: 1;
   transform: translateY(-50%);
   top: 50%;
+  animation: slide-out 0.2s ;
+}
+#botao button:hover{
+  outline: 8px solid var(---surface-color);
 }
 #botao span {
   display: block;
@@ -90,8 +94,7 @@ div#container {
 }
 
 .light #botao button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
 }
 
 div#lista {
@@ -163,4 +166,20 @@ footer p {
 .eu-e-mo {
   border-radius: 30px;
   max-width: 150px;
+}
+@keyframes slide-in{
+  from{
+    left: 0;
+  }
+  to{
+    left: 50%;
+  }
+}
+@keyframes slide-out{
+  from{
+    left: 50%;
+  }
+  to{
+    left: 0;
+  }
 }
